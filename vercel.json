@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "outputDirectory": "public",
+  "outputDirectory": "public/build",
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
   "functions": {
