@@ -1,7 +1,21 @@
 {
+  "framework": null,
+  "outputDirectory": "public",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci",
   "functions": {
-    "api/*.php": {
+    "api/index.php": {
       "runtime": "vercel-php@0.6.0"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/(css|js|images)/(.*)",
+      "dest": "/public/$1/$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
+    }
+  ]
 }
